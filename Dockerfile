@@ -2,8 +2,8 @@ FROM frolvlad/alpine-glibc:alpine-3.8
 
 RUN mkdir -p "/opt/conda" && \
     apk add --no-cache --virtual .build wget ca-certificates bash && \
-    wget "http://repo.continuum.io/miniconda/Miniconda3-4.5.4-Linux-x86_64.sh" -O miniconda.sh && \
-    echo "a946ea1d0c4a642ddf0c3a26a18bb16d  miniconda.sh" | md5sum -c && \
+    wget "http://repo.continuum.io/miniconda/Miniconda3-4.5.11-Linux-x86_64.sh" -O miniconda.sh && \
+    echo "e1045ee415162f944b6aebfe560b8fee  miniconda.sh" | md5sum -c && \
     bash miniconda.sh -f -b -p "/opt/conda" && \
     rm miniconda.sh && \
     export PATH="/opt/conda/bin:$PATH" && \
